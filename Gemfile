@@ -61,3 +61,8 @@ gem 'compass-rails'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'letter_opener_web'
+
+# ソーシャルログイン
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'dotenv-rails'

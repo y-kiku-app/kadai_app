@@ -104,10 +104,15 @@ GEM
     devise-i18n (1.10.0)
       devise (>= 4.8.0)
     devise-i18n-views (0.3.7)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     ffi (1.15.3)
     globalid (0.5.2)
       activesupport (>= 5.0)
+    hashie (4.1.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
@@ -139,6 +144,17 @@ GEM
     nokogiri (1.12.2)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
+    oauth (0.5.6)
+    omniauth (2.0.4)
+      hashie (>= 3.4.6)
+      rack (>= 1.6.2, < 3)
+      rack-protection
+    omniauth-oauth (1.2.0)
+      oauth
+      omniauth (>= 1.0, < 3)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     orm_adapter (0.5.0)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -152,6 +168,8 @@ GEM
     rack (2.2.3)
     rack-mini-profiler (2.3.2)
       rack (>= 1.2.0)
+    rack-protection (2.1.0)
+      rack
     rack-proxy (0.7.0)
       rack
     rack-test (1.1.0)
@@ -256,9 +274,12 @@ DEPENDENCIES
   devise
   devise-i18n
   devise-i18n-views
+  dotenv-rails
   jbuilder (~> 2.7)
   letter_opener_web
   listen (~> 3.3)
+  omniauth
+  omniauth-twitter
   pry-rails
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
