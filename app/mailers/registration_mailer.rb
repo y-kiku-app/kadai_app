@@ -1,5 +1,4 @@
 class RegistrationMailer < ApplicationMailer
-
   def welcome(user, password)
     @user = user
     @password = password
