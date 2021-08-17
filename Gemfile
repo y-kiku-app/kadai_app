@@ -67,6 +67,7 @@ gem 'pry-rails'
 # ソーシャルログイン
 gem 'dotenv-rails'
 gem 'omniauth'
+gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-twitter'
 
 gem 'rubocop', require: false
