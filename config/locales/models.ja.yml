@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    attributes:
+      user: #ユーザーモデルのカラム名日本語化
+        name: "氏名"
+        uid: "ID"
+        image: "プロフィール画像"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: 確認用パスワード
+        remember_me: 次回から自動的にログイン
+      current_password:
+        blank: "が空になっています"
+
