@@ -9,6 +9,8 @@ AllCops:
     - 'tmp/**/*'
     - 'node_modules/**/*'
     - 'lib/tasks/auto_annotate_models.rake'
+    - 'spec/**/*'
+
 
 # Missing magic comment # frozen_string_literal: true. を無視
 Style/FrozenStringLiteralComment:
@@ -29,3 +31,6 @@ Style/ClassAndModuleChildren:
 ## 日本語コメントを許可します。
 Style/AsciiComments:
   Enabled: false
+
+Metrics/AbcSize:
+  Max: 25
