@@ -59,12 +59,15 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem 'compass-rails'
+gem 'pry-rails'
+
+# devise
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+# メール確認
 gem 'letter_opener_web'
-gem 'pry-rails'
 
 # ソーシャルログイン
 gem 'dotenv-rails'
@@ -72,6 +75,7 @@ gem 'omniauth'
 gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-twitter'
 
+# spec,rubocop
 gem 'factory_bot_rails'
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
