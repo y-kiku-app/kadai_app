@@ -5,12 +5,17 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def after_sign_in_path_for(_resource)
-    mypage_show_path # ログイン後に遷移するpathを設定
+  def after_sign_in_path_for(resource)
+    case resource
+    when User
+      mypage_show_path
+    when AdminUser
+      admin_user_dashboards_index_path
+    end
   end
 
   def after_sign_out_path_for(_resource)
-    new_user_session_path # ログアウト後に遷移するpathを設定
+   mypage_logout_path
   end
 
   def configure_permitted_parameters

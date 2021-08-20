@@ -2,6 +2,17 @@ Rails.application.routes.draw do
 
   # root "mypage/show"
   get 'mypage/show'
+  get 'mypage/logout'
+  get 'admin_user_dashboards/index'
+
+  devise_for :admin_users, controllers: {
+    sessions: "admin_users/sessions"
+  }
+  namespace :admin_users do
+    get 'admins/sign_in' => 'admin/sessions#new', as: 'new_admin_session'
+    post 'admins/sign_in' => 'admin/sessions#create', as: 'admin_session'
+    delete 'admins/sign_out' => 'admin/sessions#destroy', as: 'destroy_admin_session'
+  end
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',
@@ -16,7 +27,8 @@ Rails.application.routes.draw do
     get 'users/sign_up/complete', to: 'users/registrations#complete'
   end
 
-  resources :mypage, only: [:show]
+  resources :mypage, only: [:show,:logout]
+  resources :admin_user_dashboards, only: [:index]
 
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end
