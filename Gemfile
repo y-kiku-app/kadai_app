@@ -79,3 +79,11 @@ gem 'omniauth-twitter'
 gem 'factory_bot_rails'
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
+
+gem 'bootstrap'
+gem 'font-awesome-sass'
+gem 'jquery-rails'
+gem 'uglifier'
+
+gem 'rails_admin'
+gem 'rails_admin-i18n'
