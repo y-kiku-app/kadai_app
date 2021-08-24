@@ -10,12 +10,12 @@ class ApplicationController < ActionController::Base
     when User
       mypage_show_path
     when AdminUser
-      admin_user_dashboards_index_path
+      rails_admin_path
     end
   end
 
   def after_sign_out_path_for(_resource)
-   mypage_logout_path
+    mypage_logout_path
   end
 
   def configure_permitted_parameters

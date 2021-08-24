@@ -26,7 +26,8 @@ ja:
         unlock_token: ロック解除用トークン
         updated_at: 更新日
     models:
-      user: ユーザ
+      user: ユーザー
+      admin_user: 管理者
   devise:
     confirmations:
       confirmed: アカウントを登録しました。
@@ -141,4 +142,5 @@ ja:
         one: エラーが発生したため %{resource} は保存されませんでした。
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
       Invalid credentials: ユーザー名もしくはパスワードが間違っています。
+
 

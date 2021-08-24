@@ -1,7 +1,7 @@
 ja:
   activerecord:
     attributes:
-      user: #ユーザーモデルのカラム名日本語化
+      user:
         name: "氏名"
         uid: "ID"
         image: "プロフィール画像"
@@ -11,4 +11,15 @@ ja:
         remember_me: 次回から自動的にログイン
       current_password:
         blank: "が空になっています"
+      admin_user:
+        current_password: "現在のパスワード"
+        name: "氏名"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "確認用パスワード"
+        remember_me: "ログインを記憶"
+        reset_password_sent_at: "パスワードリセット送信時刻"
+        remember_created_at: "ログイン記憶時刻"
+        created_at: "作成日"
+        updated_at: "更新日"
 
