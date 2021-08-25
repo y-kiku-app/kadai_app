@@ -13,12 +13,6 @@
       <% end %>
     </nav>
 
-      <% if flash[:notice] %>
-        <p><%= flash[:notice] %></p>
-      <% end %>
-      <% if flash[:alert] %>
-        <p><%= flash[:alert] %></p>
-      <% end %>
 
     <title>KadaiApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -30,6 +24,7 @@
   </head>
 
   <body>
+    <%= render 'layouts/flash' %>
     <%= yield %>
   </body>
 </html>
