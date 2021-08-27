@@ -1,29 +1,35 @@
-<h2>新規会員登録</h2>
+<%= render "users/shared/error_messages", resource: resource %>
 
-
-<%= form_with model: @user, url: users_sign_up_confirm_path(@user), local: true do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, :placeholder => "sample@appirits.com" %>
-  </div>
-
-    <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, :placeholder => "田中　太郎" %>
-  </div>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    <%= f.password_field :password_confirmation %>
-    <% if @minimum_password_length %>
-      (<%= @minimum_password_length %>文字以上)
+<div class="card col-sm-5 mx-auto  mt-5  bg-light">
+  <div class="card-body">
+    <h4 class="card-title mt-3">SNS認証で会員登録</h4>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= link_to " #{OmniAuth::Utils.camelize(provider)}アカウントでカンタン登録", omniauth_authorize_path(resource_name, provider), method: :post, :class => "btn btn-primary mt-3" %>
     <% end %>
-
-  <div class="actions">
-    <%= f.submit "確認" %>
   </div>
-<% end %>
 
-<%= render "users/shared/links" %>
+  <div class="card-body">
+    <h4 class="card-title mt-3">メールアドレスで会員登録</h4>
+    <%= form_with model: @user, url: users_sign_up_confirm_path(@user), local: true do |f| %>
+      <div class="form-group mt-3">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, placeholder: "(例) sample@appirits.com", class: "form-control", required: true %>
+      </div>
+
+      <div class="form-group mt-3">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, placeholder: "(例) 田中 太郎", class: "form-control", required: true %>
+      </div>
+
+      <div class="form-group mt-3">
+        <%= f.password_field :password, class: "form-control", placeholder: "8文字以上で入力して下さい", required: true %>
+      </div>
+
+      <div class="actions d-grid gap-2 d-md-block my-md-3">
+        <%= f.submit "会員登録", class: "btn btn-primary"  %>
+      </div>
+      <%= link_to "既に会員の方はこちら", new_session_path(resource_name), class: "float-right" %>
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="card col-sm-10 mx-auto  mt-5  bg-light">
+  <div class="card-body">
+    <h4 class="card-title mt-3">退会手続き</h4>
+    <p class="card-text my-md-3">退会をご希望の方は、下記ボタンからお願い致します。</p>
+    <div class="actions d-grid gap-2 d-md-block my-md-3">
+        <%= button_to "アカウント解約", registration_path(resource_name), data: { confirm: "本当によろしいですか?" }, method: :delete, class: "btn btn-primary"  %>
+    </div>
+    <div class="actions d-grid gap-2 d-md-block my-md-3">
+        <%= link_to "戻る", :back, class: "btn btn-success"  %>
+    </div>
+  </div>
+</div>
