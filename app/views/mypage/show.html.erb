@@ -1,3 +1,39 @@
-<h1>マイページ</h1>
+<div class=”row”>
+    <div class="card col-sm-10 mx-auto my-md-3">
+        <div class="card-header">
+            <h4>最新の資料はこちら</h4>
+        </div>
+        <div class="card-body”col-3">
+            <p class="card-text my-md-3"><%= @user %></p>
+            <p class="card-text my-md-3">内容内容内容内容内容内容内容内容内容内容</p>
+        </div>
+    </div>
+</div>
 
-<%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<div class=”row”>
+    <div class="card-group col-sm-10 mx-auto text-center">
+        <div class="card">
+            <div class="card-header">
+                <h4>アカウント情報編集</h4>
+            </div>
+            <div class="card-body”col-3">
+                <%= link_to edit_user_registration_path do %>
+                    <i class="fas fa-user-edit fa-5x my-md-3" ></i>
+                <% end %>
+                <p class="card-text my-md-3">登録した氏名、メールアドレス、パスワードなどを変更可能です。</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h4>退会手続き</h4>
+            </div>
+            <div class="card-body”col-3">
+                <%= link_to users_sign_up_cancellation_path do %>
+                    <i class="fas fa-times-circle fa-5x my-md-3" style="color: lightcoral;"></i>
+                <% end %>
+                <p class="card-text my-md-3">退会の手続きはこちらから。</p>
+            </div>
+        </div>
+    </div>
+</div>

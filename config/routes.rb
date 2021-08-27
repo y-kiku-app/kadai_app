@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     get 'sign_out', to: 'users/sessions#destroy'
     post 'users/sign_up/confirm', to: 'users/registrations#confirm'
     get 'users/sign_up/complete', to: 'users/registrations#complete'
+    get 'users/sign_up/cancellation', to: 'users/registrations#cancellation'
   end
 
   resources :mypage, only: [:show,:logout]

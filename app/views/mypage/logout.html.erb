@@ -1,0 +1,42 @@
+<div class=”row”>
+    <div class="card col-sm-10 mx-auto my-md-3">
+        <div class="card-header text-center">
+            <h4>ご利用ありがとうございました！</h4>
+        </div>
+        <div class="text-center">
+            <i class="fas fa-running fa-7x my-md-3" style="color: seagreen;"></i>
+            <i class="fas fa-door-open fa-10x my-md-3" style="color:seagreen;"></i>
+        </div>
+    </div>
+</div>
+
+<div class=”row”>
+    <div class="card-group col-sm-10 mx-auto text-center">
+        <div class="card">
+            <div class="card-header">
+                <h4>会員ログイン画面</h4>
+            </div>
+            <div class="card-body”col-3">
+                <%= link_to new_user_session_path do %>
+                    <i class="fas fa-user-check fa-5x my-md-3" ></i>
+                <% end %>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h4>管理者ログイン画面</h4>
+            </div>
+            <div class="card-body”col-3">
+                <%= link_to new_admin_user_session_path do %>
+                    <i class="fas fa-user-secret fa-5x my-md-3" style="color: lightcoral;"></i>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
