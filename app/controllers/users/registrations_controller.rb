@@ -12,7 +12,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     @user = User.new(sign_up_params)
     render :new and return if params[:back]
-
     super
   end
 
@@ -76,5 +75,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # The path used after sign up for inactive accounts.
   def after_inactive_sign_up_path_for(resource)
     users_sign_up_complete_path(resource)
+  end
+
+  def after_update_path_for(resource)
+    mypage_show_path
   end
 end
