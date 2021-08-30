@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # root "mypage/show"
+  root "mypage#logout"
   get 'mypage/show'
   get 'mypage/logout'
   get 'admin_user_dashboards/index'
