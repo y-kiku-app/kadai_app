@@ -1,17 +1,37 @@
 <div class=”row”>
-    <div class="card col-sm-10 mx-auto my-md-3">
+    <div class="card col-sm-10 mx-auto my-md-5  text-center">
         <div class="card-header">
             <h4>最新の資料はこちら</h4>
         </div>
-        <div class="card-body”col-3">
-            <p class="card-text my-md-3"><%= @user %></p>
-            <p class="card-text my-md-3">内容内容内容内容内容内容内容内容内容内容</p>
+        <div class="card-body”col-3 ">
+            <table class="table my-md-3 ">
+                <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">資料名</th>
+                    <th scope="col">ダウンロードリンク</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>サンプル資料①</td>
+                    <td><%= link_to 'ダウンロードはこちらから', 'https://xfs.jp/WuRx4', target: :_blank, rel: "noopener noreferrer"  %></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>サンプル資料②</td>
+                    <td><%= link_to 'ダウンロードはこちらから', 'https://xfs.jp/WuRx4', target: :_blank, rel: "noopener noreferrer"  %></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="card-text my-md-3">ダウンロードパスワードは全て「abc12345」となっています。</p>
         </div>
     </div>
 </div>
 
 <div class=”row”>
-    <div class="card-group col-sm-10 mx-auto text-center">
+    <div class="card-group col-sm-10 mx-auto text-center my-md-5">
         <div class="card">
             <div class="card-header">
                 <h4>アカウント情報編集</h4>

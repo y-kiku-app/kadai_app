@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true, length: { minimum: 8 }
+  validates :password, presence: true, length: { minimum: 8 }, on: :create
 
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first

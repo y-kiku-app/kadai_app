@@ -57,6 +57,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
+  # def update_resource(resource, params)
+  #   if params[:password].present? && params[:password_confirmation].present?
+  #     resource.update_attributes(params)
+  #   else
+  #     resource.update_without_password(params)
+  #   end
+  # end
+
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
@@ -64,7 +72,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_account_update_params
+  #   devise_parameter_sanitizer.permit(:account_update, keys: [:name])
+  #   devise_parameter_sanitizer.permit(:account_update, keys: [:email])
   #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
+  #   devise_parameter_sanitizer.permit(:account_update, keys: [:password])
   # end
 
   # The path used after sign up.
