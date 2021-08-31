@@ -19,11 +19,6 @@
         <%= f.label :password %> (変更がない場合、空欄で問題ありません)<br />
         <%= f.password_field :password, class: "form-control", autocomplete: "new-password", minlength: "8"%>
       </div>
-      <div class="field">
-        <%= f.label :current_password %> <i>(変更を確認するためには、現在のパスワードが必要です。)</i><br />
-        <%= f.password_field :current_password, class: "form-control", autocomplete: "current-password" %>
-      </div>
-
       <div class="actions d-grid gap-2 d-md-block my-md-3">
         <%= f.submit "変更", class: "btn btn-primary"  %>
       </div>
